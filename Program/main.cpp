@@ -25,9 +25,10 @@ void full_mass(int* mass, int size, const int* dia) {
 }
 
 void draw_mass_recurs(const int* mass, const int& size, const int& c_space) {
-	cout << "|" << setw(c_space - 1) << mass[size - 1];
 	if (size > 1)
 		draw_mass_recurs(mass, size - 1, c_space);
+
+	cout << "|" << setw(c_space - 1) << mass[size - 1];
 }
 
 void draw_mass(const int* mass, const int& size, const int& c_space) {
